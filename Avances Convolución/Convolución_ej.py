@@ -8,11 +8,13 @@ import matplotlib.pyplot as plt
 import argparse
 from add_padding import add_padding
 
-def conv_mat(matriz, kernel, padding):
+def conv_mat(matriz, kernel):
 	"""
-	Función para realizar convolución sobre una matriz, utilizando un valor definido de padding
+	Función para realizar convolución sobre una matriz
+
+	Se utiliza la función add_panding para agregar 0s con cierto grosor alrededor de la imagen original
 	"""
-	matriz = add_padding(matriz, padding)
+	matriz = add_padding(matriz, kernel)
 	fil_m, col_m = matriz.shape
 	fil_k, col_k = kernel.shape
 	conv_final = np.zeros(((fil_m-fil_k)+1, (col_m-col_k)+1)) #Se declara matriz con dimensiones finales
@@ -24,7 +26,7 @@ def conv_mat(matriz, kernel, padding):
 
 	return(conv_final)
 
-def filtro_img(imagen, kernel, padding):
+def filtro_img(imagen, kernel):
 	"""
 	Función para aplicar filtro y mostrar imagenes
 	"""
@@ -40,7 +42,7 @@ def filtro_img(imagen, kernel, padding):
 	plt.title("Imagen en escala de grises")
 	plt.show()
 
-	imagen_conv = conv_mat(imagen, kernel, padding)
+	imagen_conv = conv_mat(imagen, kernel)
 
 	plt.imshow(imagen_conv, cmap='gray')
 	plt.title("Imagen con filtro aplicado")
@@ -60,7 +62,5 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Ruta a imagen")
 args = vars(ap.parse_args())
 imagen = cv2.imread(args["image"]) 
-#Se lee el valor para el padding y posteriormente se muestran las imágenes
-p = int(input("Inserta el valor para el padding: "))
-imagen = filtro_img(imagen, ej_kernel, p)
+imagen = filtro_img(imagen, ej_kernel)
 
