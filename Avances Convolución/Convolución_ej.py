@@ -9,6 +9,9 @@ import argparse
 from add_padding import add_padding
 
 def conv_mat(matriz, kernel, padding):
+	"""
+	Función para realizar convolución sobre una matriz, utilizando un valor definido de padding
+	"""
 	matriz = add_padding(matriz, padding)
 	fil_m, col_m = matriz.shape
 	fil_k, col_k = kernel.shape
@@ -21,7 +24,10 @@ def conv_mat(matriz, kernel, padding):
 
 	return(conv_final)
 
-def filtro_img(imagen, kernel, padding): #Función para aplicar filtro y mostrar imagenes
+def filtro_img(imagen, kernel, padding):
+	"""
+	Función para aplicar filtro y mostrar imagenes
+	"""
 	plt.imshow(cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB))
 	plt.title("Imagen original")
 	plt.show()
@@ -46,8 +52,8 @@ def filtro_img(imagen, kernel, padding): #Función para aplicar filtro y mostrar
 Se utiliza kernel de ejemplo para probar el código (box blur)
 """
 ej_kernel = np.array([[1/9, 1/9, 1/9],
-					  [1/9, 1/9, 1/9],
-					  [1/9, 1/9, 1/9]])
+				  [1/9, 1/9, 1/9],
+				  [1/9, 1/9, 1/9]])
 
 # Se leen argumentos desde la línea de comandos como "python Convolución_ej.py -i Img_Casa.jpg"
 ap = argparse.ArgumentParser()
