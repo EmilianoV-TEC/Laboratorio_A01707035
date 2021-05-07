@@ -12,7 +12,7 @@ def add_padding(matriz, kernel):
 	"""
 	fil_m, col_m = matriz.shape
 	fil_k, col_k = kernel.shape
-    #Calculamos la cantidad de padding a partir de las dimensiones del kernel
+	#Calculamos la cantidad de padding a partir de las dimensiones del kernel
 	pad_height = int((fil_k - 1) / 2)
 	pad_width = int((col_k - 1) / 2)
 	#Creamos matriz con nuevas dimensiones (agregamos padding en los 4 lados)

@@ -46,6 +46,8 @@ Ahora, para correr el programa principal del proyecto es necesario correr el sig
 
 Al correr el script, este desplegará una serie de imágenes, la original, en blanco y negro, y con el filtro de box blur aplicado. Esta imagen será pasada automáticamente a escala de grises en caso de ser necesario, si esto ocurre se verá un mensaje en la consola indicándolo.
 
+![](Imagenes/Resultados.jpg)
+
 ## Referencias y guía de estilo:
 * AI Shack(s.f) *Image convolution examples*. Convolutions. Recuperado el 6 de mayo de 2021, de: https://aishack.in/tutorials/image-convolution-examples/
 
