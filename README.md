@@ -5,7 +5,7 @@ Laboratorio de Github - Emiliano Vásquez Olea
 
 Este repositorio fue creado como parte de la evaluación de la Semana Tec *Herramientas computacionales: el arte de la programación*. En el cuál se integran ciertos documentos utilizados para las actividades iniciales de introducción al uso de github como [Programa.c](Programa.c) y [Version.html](Version.html). 
 
-Sin embargo, en la carpeta [Avances Convolución](https://github.com/EmilianoV-TEC/Laboratorio_A01707035/tree/main/Avances%20Convoluci%C3%B3n) se encuentran los scripts que fueron desarrollados a lo largo de la semana en relación con los temas de visión vistos en clase. Estos programas permiten aplicar un filtro a una imagen utilizando convolución.
+Sin embargo, en la carpeta [Avances_Convolución](https://github.com/EmilianoV-TEC/Laboratorio_A01707035/tree/main/Avances_Convoluci%C3%B3n) se encuentran los scripts que fueron desarrollados a lo largo de la semana en relación con los temas de visión vistos en clase. Estos programas permiten aplicar un filtro a una imagen utilizando convolución.
 
 ## Uso del proyecto
 
